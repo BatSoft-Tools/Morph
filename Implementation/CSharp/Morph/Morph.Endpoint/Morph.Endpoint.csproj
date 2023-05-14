@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{54BF704C-D6A6-432D-8E13-C8E1CB4FE602}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Morph.Endpoint</RootNamespace>
+    <AssemblyName>Morph.Endpoint</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Apartment.cs" />
+    <Compile Include="ApartmentProxy.cs" />
+    <Compile Include="ApartmentSession.cs" />
+    <Compile Include="ApartmentShared.cs" />
+    <Compile Include="Device.cs" />
+    <Compile Include="EMorphInvocation.cs" />
+    <Compile Include="LinkMember.cs" />
+    <Compile Include="LinkMethod.cs" />
+    <Compile Include="LinkProperty.cs" />
+    <Compile Include="LinkService.cs" />
+    <Compile Include="LinkServlet.cs" />
+    <Compile Include="NumberedWait.cs" />
+    <Compile Include="Params.EncodingTypes.cs" />
+    <Compile Include="Params.InstanceFactory.cs" />
+    <Compile Include="Params.Parameters.cs" />
+    <Compile Include="Params.Value.cs" />
+    <Compile Include="Params.ValueBase.cs" />
+    <Compile Include="Params.ValueInstance.cs" />
+    <Compile Include="Params.ValueObject.cs" />
+    <Compile Include="Params.ValueReference.cs" />
+    <Compile Include="Params.ValueReferenceIndex.cs" />
+    <Compile Include="Params.ValueStream.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Replies.cs" />
+    <Compile Include="Service.cs" />
+    <Compile Include="Servlet.cs" />
+    <Compile Include="ServletProxy.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Bat.Library\Bat.Library.Logging\Bat.Library.Logging.csproj">
+      <Project>{E7790225-AC41-4AA3-961D-6B9E8CD05B7E}</Project>
+      <Name>Bat.Library.Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Morph.Internet\Morph.Internet.csproj">
+      <Project>{F682FB51-1913-43E0-8B0D-796C3430F72E}</Project>
+      <Name>Morph.Internet</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Morph.Lib\Morph.Lib.csproj">
+      <Project>{BEB4AC6B-E128-4293-BB81-5A488318EB93}</Project>
+      <Name>Morph.Lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Morph.Sequencing\Morph.Sequencing.csproj">
+      <Project>{A9FCDB8A-CCAA-4AC0-A642-CE1844F884A7}</Project>
+      <Name>Morph.Sequencing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Morph\Morph.csproj">
+      <Project>{1F58C983-9537-41D1-8124-2276E1D20EEC}</Project>
+      <Name>Morph</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

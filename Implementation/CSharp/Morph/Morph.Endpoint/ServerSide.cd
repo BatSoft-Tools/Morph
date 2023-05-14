@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Segoe UI" Size="9" />
+  <Class Name="Morph.Endpoint.Servlet" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Servlet.cs</FileName>
+      <HashCode>AAAAAAIAAAAAgQAgAAAAAAAAAABAAAAAAAAAAAEAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Morph.Endpoint.Servlets">
+    <Position X="0.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Servlet.cs</FileName>
+      <HashCode>AAIAAQAAAAAAAAAAAAAANAAACABIAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Default" />
+    </ShowAsAssociation>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+  </Class>
+  <Class Name="Morph.Endpoint.Service" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="1.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Service.cs</FileName>
+      <HashCode>AAAAAAAAAAAAgAAAIAAwAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Apartments" />
+    </ShowAsAssociation>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Morph.Endpoint.Services">
+    <Position X="1" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Service.cs</FileName>
+      <HashCode>AAAAAAAAACAAAAAAAIAAAAAAAAAAAAAAIIAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Morph.Endpoint.Apartment" Collapsed="true">
+    <Position X="3.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Apartment.cs</FileName>
+      <HashCode>AADAEQKAACAAgAAAAAAAAQAAAAAgAAEAAAACAAEAAAA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="DefaultServlet" />
+      <Property Name="Servlets" />
+    </ShowAsAssociation>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="DefaultServlet" Type="Morph.Endpoint.Servlet">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.11" Y="0.06" Height="0.182" Width="1.1" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Servlets" Type="Morph.Endpoint.Servlets" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.125" Y="5.062" />
+        <Point X="4.125" Y="6.344" />
+        <Point X="2" Y="6.344" />
+      </Path>
+    </AssociationLine>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Morph.Endpoint.Apartments" Collapsed="true">
+    <Position X="4.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Apartment.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAIABAAAAAAAAAAAAAIAgAQAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Morph.Endpoint.DefaultServletObjectFactoryShared" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="4.5" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>ApartmentShared.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.1" Collapsed="true" />
+  </Class>
+  <Class Name="Morph.Endpoint.ApartmentsShared" Collapsed="true">
+    <Position X="3.25" Y="1.75" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>ApartmentShared.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="fApartment" />
+    </ShowAsAssociation>
+    <InheritanceLine Type="Morph.Endpoint.Apartments" FixedFromPoint="true">
+      <Path>
+        <Point X="5.188" Y="1.062" />
+        <Point X="5.188" Y="1.375" />
+        <Point X="4.125" Y="1.375" />
+        <Point X="4.125" Y="1.75" />
+      </Path>
+    </InheritanceLine>
+    <AssociationLine Name="fApartment" Type="Morph.Endpoint.Apartment" FixedFromPoint="true">
+      <Path>
+        <Point X="4.125" Y="2.441" />
+        <Point X="4.125" Y="4.5" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.027" Y="1.018" />
+      </MemberNameLabel>
+    </AssociationLine>
+  </Class>
+  <Class Name="Morph.Endpoint.ApartmentsSession">
+    <Position X="5.5" Y="1.75" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>ApartmentSession.cs</FileName>
+      <HashCode>IAAAAAAAAiAIAAAAAAABAAAAAIAAAAEAAAAAAAAAABA=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <InheritanceLine Type="Morph.Endpoint.Apartments" FixedFromPoint="true">
+      <Path>
+        <Point X="5.188" Y="1.062" />
+        <Point X="5.188" Y="1.375" />
+        <Point X="6.375" Y="1.375" />
+        <Point X="6.375" Y="1.75" />
+      </Path>
+    </InheritanceLine>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="Morph.Endpoint.DefaultServletObjectFactory" Collapsed="true">
+    <Position X="7.75" Y="1.75" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>Apartment.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+</ClassDiagram>

@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Segoe UI" Size="9" />
+  <Class Name="Morph.Endpoint.ApartmentProxy">
+    <Position X="3.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>ApartmentProxy.cs</FileName>
+      <HashCode>oAiCAAKAACAAigKAIAEAAAAAAABIIhIAIIAASAAIAgI=</HashCode>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="Replies" />
+      <Field Name="Waits" />
+      <Field Name="fDevice" />
+      <Property Name="DefaultServlet" />
+    </ShowAsAssociation>
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="Replies" Type="Morph.Endpoint.Replies">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.784" Y="0.048" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Waits" Type="Morph.Endpoint.NumberedWaits">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.11" Y="0.05" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Morph.Endpoint.ServletProxy">
+    <Position X="0.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>ServletProxy.cs</FileName>
+      <HashCode>AIAAQAIAAAAAgAAAAEAACAAAAAAAQFAAAAACCAAAAMA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="fApartmentProxy" />
+    </ShowAsAssociation>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="fApartmentProxy" Type="Morph.Endpoint.ApartmentProxy">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.006" Y="0.07" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Morph.Endpoint.Replies" Collapsed="true">
+    <Position X="4.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Replies.cs</FileName>
+      <HashCode>AAAgAAQAAAAAAAAAACAABAAAAAAAgAAAEAAEAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Morph.Endpoint.NumberedWaits" Collapsed="true">
+    <Position X="2.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>NumberedWait.cs</FileName>
+      <HashCode>AAIAAAAAAAAAQAAAAIACAAAAAAwIAAAAAAAAAAABAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Morph.Endpoint.ServletProxies">
+    <Position X="0.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>ServletProxy.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAIIAAAAAAAAAIAAAAAAAACAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="fApartmentProxy" />
+    </ShowAsAssociation>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="fApartmentProxy" Type="Morph.Endpoint.ApartmentProxy">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.027" Y="0.039" />
+      </MemberNameLabel>
+    </AssociationLine>
+  </Class>
+  <Class Name="Morph.LinkStack" Collapsed="true">
+    <Position X="6" Y="3" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Morph.Endpoint.Device">
+    <Position X="6" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Device.cs</FileName>
+      <HashCode>AAAAABAAAAAAAAAAIIAAAAAAAAAAAAAAAAAAAQAAAAA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="fPath" />
+    </ShowAsAssociation>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="fPath" Type="Morph.LinkStack">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.609" Y="0.247" />
+      </MemberNameLabel>
+    </AssociationLine>
+  </Class>
+</ClassDiagram>

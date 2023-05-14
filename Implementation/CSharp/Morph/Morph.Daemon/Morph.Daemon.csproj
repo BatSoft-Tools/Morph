@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1F4592C5-608F-43CC-81BC-C4BEC6B3F4BA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Morph.Daemon</RootNamespace>
+    <AssemblyName>Morph.Daemon</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+    </Reference>
+    <Reference Include="System.Configuration.Install">
+    </Reference>
+    <Reference Include="System.ServiceProcess">
+    </Reference>
+    <Reference Include="System.Xml">
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EMorphDaemon.cs" />
+    <Compile Include="Lib.AwareObject.cs" />
+    <Compile Include="Lib.DaemonFactory.cs" />
+    <Compile Include="Lib.SocketObjectManager.cs" />
+    <Compile Include="LinkType.LinkMessage.cs" />
+    <Compile Include="LinkType.LinkService.cs" />
+    <Compile Include="MorphDaemonInstaller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MorphDaemonService.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service.Apartments.cs" />
+    <Compile Include="Service.Callbacks.cs" />
+    <Compile Include="Service.Services.cs" />
+    <Compile Include="Service.Startups.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Bat.Library\Bat.Library.Logging\Bat.Library.Logging.csproj">
+      <Project>{E7790225-AC41-4AA3-961D-6B9E8CD05B7E}</Project>
+      <Name>Bat.Library.Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Bat.Library\Bat.Library.Service\Bat.Library.Service.csproj">
+      <Project>{F9CFA119-BFA9-4CE4-80BD-A83AEF57ECC9}</Project>
+      <Name>Bat.Library.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Morph.Endpoint\Morph.Endpoint.csproj">
+      <Project>{54BF704C-D6A6-432D-8E13-C8E1CB4FE602}</Project>
+      <Name>Morph.Endpoint</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Morph.Internet\Morph.Internet.csproj">
+      <Project>{F682FB51-1913-43E0-8B0D-796C3430F72E}</Project>
+      <Name>Morph.Internet</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Morph.Lib\Morph.Lib.csproj">
+      <Project>{BEB4AC6B-E128-4293-BB81-5A488318EB93}</Project>
+      <Name>Morph.Lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Morph\Morph.csproj">
+      <Project>{1F58C983-9537-41D1-8124-2276E1D20EEC}</Project>
+      <Name>Morph</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
