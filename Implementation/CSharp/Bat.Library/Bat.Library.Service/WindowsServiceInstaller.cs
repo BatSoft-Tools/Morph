@@ -19,31 +19,31 @@ namespace Bat.Library.Service
 
     public WindowsServiceInstaller()
     {
-      ServiceAccount Account;
-      ServiceStartMode StartMode;
-      string ServiceName, DisplayName, Description;
-      Initialise(out Account, out StartMode, out ServiceName, out DisplayName, out Description);
+      ServiceAccount account;
+      ServiceStartMode startMode;
+      string serviceName, displayName, description;
+      Initialise(out account, out startMode, out serviceName, out displayName, out description);
 
       // Instantiate installers for process and services.
       _ServiceInstaller = new ServiceInstaller();
       _ServiceProcessInstaller = new ServiceProcessInstaller();
 
       // The services run under the system account.
-      _ServiceProcessInstaller.Account = Account;
+      _ServiceProcessInstaller.Account = account;
 
       // The services are started upon startup.
-      _ServiceInstaller.StartType = StartMode;
+      _ServiceInstaller.StartType = startMode;
 
       // ServiceName must equal those on ServiceBase derived classes.            
-      _ServiceInstaller.ServiceName = ServiceName;
-      _ServiceInstaller.DisplayName = DisplayName;
-      _ServiceInstaller.Description = Description;
+      _ServiceInstaller.ServiceName = serviceName;
+      _ServiceInstaller.DisplayName = displayName;
+      _ServiceInstaller.Description = description;
 
       // Add installers to collection. Order is not important.
       Installers.Add(_ServiceInstaller);
       Installers.Add(_ServiceProcessInstaller);
     }
 
-    protected abstract void Initialise(out ServiceAccount Account, out ServiceStartMode StartMode, out string ServiceName, out string DisplayName, out string Description);
+    protected abstract void Initialise(out ServiceAccount account, out ServiceStartMode startMode, out string serviceName, out string displayName, out string description);
   }
 }
