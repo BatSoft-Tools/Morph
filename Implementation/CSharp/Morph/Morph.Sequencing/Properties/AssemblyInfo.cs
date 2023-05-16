@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("BatSoft")]
 [assembly: AssemblyProduct("Morph.Sequencing")]
-[assembly: AssemblyCopyright("Copyright © BatSoft 2011")]
+[assembly: AssemblyCopyright("Copyright © BatSoft 2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
