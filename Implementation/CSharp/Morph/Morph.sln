@@ -19,9 +19,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bat.Library.Service", "..\B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Morph.Daemon.Client", "Morph.Daemon.Client\Morph.Daemon.Client.csproj", "{B1C1A1CE-4AE4-421F-886B-32ED8A910EDD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Morph.Manager", "Morph.Manager\Morph.Manager.csproj", "{BF3042EC-D523-423D-9041-BD0335D950C5}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Morph.Daemon", "Morph.Daemon\Morph.Daemon.csproj", "{4482B938-FF01-46D0-82B9-C4025DE52D89}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Morph.Manager", "Morph.Manager\Morph.Manager.csproj", "{55EAFE2D-A11D-40A2-9B82-7CBB6E860201}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -113,18 +113,6 @@ Global
 		{B1C1A1CE-4AE4-421F-886B-32ED8A910EDD}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{B1C1A1CE-4AE4-421F-886B-32ED8A910EDD}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{B1C1A1CE-4AE4-421F-886B-32ED8A910EDD}.Release|x86.ActiveCfg = Release|Any CPU
-		{BF3042EC-D523-423D-9041-BD0335D950C5}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{BF3042EC-D523-423D-9041-BD0335D950C5}.Debug|Any CPU.Build.0 = Debug|x86
-		{BF3042EC-D523-423D-9041-BD0335D950C5}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
-		{BF3042EC-D523-423D-9041-BD0335D950C5}.Debug|Mixed Platforms.Build.0 = Debug|x86
-		{BF3042EC-D523-423D-9041-BD0335D950C5}.Debug|x86.ActiveCfg = Debug|x86
-		{BF3042EC-D523-423D-9041-BD0335D950C5}.Debug|x86.Build.0 = Debug|x86
-		{BF3042EC-D523-423D-9041-BD0335D950C5}.Release|Any CPU.ActiveCfg = Release|x86
-		{BF3042EC-D523-423D-9041-BD0335D950C5}.Release|Any CPU.Build.0 = Release|x86
-		{BF3042EC-D523-423D-9041-BD0335D950C5}.Release|Mixed Platforms.ActiveCfg = Release|x86
-		{BF3042EC-D523-423D-9041-BD0335D950C5}.Release|Mixed Platforms.Build.0 = Release|x86
-		{BF3042EC-D523-423D-9041-BD0335D950C5}.Release|x86.ActiveCfg = Release|x86
-		{BF3042EC-D523-423D-9041-BD0335D950C5}.Release|x86.Build.0 = Release|x86
 		{4482B938-FF01-46D0-82B9-C4025DE52D89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4482B938-FF01-46D0-82B9-C4025DE52D89}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4482B938-FF01-46D0-82B9-C4025DE52D89}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
@@ -137,9 +125,30 @@ Global
 		{4482B938-FF01-46D0-82B9-C4025DE52D89}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{4482B938-FF01-46D0-82B9-C4025DE52D89}.Release|x86.ActiveCfg = Release|Any CPU
 		{4482B938-FF01-46D0-82B9-C4025DE52D89}.Release|x86.Build.0 = Release|Any CPU
+		{55EAFE2D-A11D-40A2-9B82-7CBB6E860201}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55EAFE2D-A11D-40A2-9B82-7CBB6E860201}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55EAFE2D-A11D-40A2-9B82-7CBB6E860201}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{55EAFE2D-A11D-40A2-9B82-7CBB6E860201}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{55EAFE2D-A11D-40A2-9B82-7CBB6E860201}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{55EAFE2D-A11D-40A2-9B82-7CBB6E860201}.Debug|Mixed Platforms.Deploy.0 = Debug|Any CPU
+		{55EAFE2D-A11D-40A2-9B82-7CBB6E860201}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{55EAFE2D-A11D-40A2-9B82-7CBB6E860201}.Debug|x86.Build.0 = Debug|Any CPU
+		{55EAFE2D-A11D-40A2-9B82-7CBB6E860201}.Debug|x86.Deploy.0 = Debug|Any CPU
+		{55EAFE2D-A11D-40A2-9B82-7CBB6E860201}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55EAFE2D-A11D-40A2-9B82-7CBB6E860201}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55EAFE2D-A11D-40A2-9B82-7CBB6E860201}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{55EAFE2D-A11D-40A2-9B82-7CBB6E860201}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{55EAFE2D-A11D-40A2-9B82-7CBB6E860201}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{55EAFE2D-A11D-40A2-9B82-7CBB6E860201}.Release|Mixed Platforms.Deploy.0 = Release|Any CPU
+		{55EAFE2D-A11D-40A2-9B82-7CBB6E860201}.Release|x86.ActiveCfg = Release|Any CPU
+		{55EAFE2D-A11D-40A2-9B82-7CBB6E860201}.Release|x86.Build.0 = Release|Any CPU
+		{55EAFE2D-A11D-40A2-9B82-7CBB6E860201}.Release|x86.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {33F232B1-8BD8-47E4-A749-9171145BDEE5}
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Morph.Manager\Morph.Manager.csproj

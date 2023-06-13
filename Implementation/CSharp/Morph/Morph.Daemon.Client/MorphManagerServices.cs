@@ -92,8 +92,8 @@ namespace Morph.Daemon.Client
 
   public struct DaemonService
   {
-    public string serviceName;
-    public bool accessLocal;
-    public bool accessRemote;
+    public string serviceName { get; set; }
+    public bool accessLocal { get; set; }
+    public bool accessRemote { get; set; }
   }
 }

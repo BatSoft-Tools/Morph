@@ -6,9 +6,19 @@
     xmlns:local="clr-namespace:Morph.Manager"
     Shell.FlyoutBehavior="Disabled">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <TabBar>
+        <Tab Title="Services">
+            <ShellContent
+                Title="Morph Services"
+                ContentTemplate="{DataTemplate local:ServicesPage}"
+                Route="ServicesPage" />
+        </Tab>
+        <Tab Title="Startups">
+            <ShellContent
+                Title="Morph Startups"
+                ContentTemplate="{DataTemplate local:StartupsPage}"
+                Route="StartupsPage" />
+        </Tab>
+    </TabBar>
 
 </Shell>
