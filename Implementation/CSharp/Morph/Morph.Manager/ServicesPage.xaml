@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Morph.Manager.ServicesPage"
+             Title="Morph Services currently running">
+    <ListView x:Name="ServicesListView"
+              Margin="20"
+              SeparatorVisibility="Default"
+              SeparatorColor="Blue">
+        <ListView.Header>
+            <Grid Padding="4">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200" />
+                    <ColumnDefinition Width="120" />
+                    <ColumnDefinition Width="120" />
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" FontAttributes="Bold" FontSize="Caption" Text="Service Name" />
+                <Label Grid.Column="1" FontAttributes="Bold" FontSize="Caption" Text="Local Access" />
+                <Label Grid.Column="2" FontAttributes="Bold" FontSize="Caption" Text="Remote Access" />
+            </Grid>
+        </ListView.Header>
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Grid Padding="4">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="200" />
+                            <ColumnDefinition Width="120" />
+                            <ColumnDefinition Width="120" />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" Text="{Binding ServiceName}" />
+                        <Label Grid.Column="1" Text="{Binding AccessLocal}" />
+                        <Label Grid.Column="2" Text="{Binding AccessRemote}" />
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

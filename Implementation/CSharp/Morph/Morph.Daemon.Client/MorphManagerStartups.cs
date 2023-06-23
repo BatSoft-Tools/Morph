@@ -43,10 +43,14 @@ namespace Morph.Daemon.Client
     }
   }
 
-  public struct DaemonStartup
+  public class DaemonStartup
   {
-    public string serviceName { get; set; }
-    public string fileName { get; set; }
-    public int timeout { get; set; }
+    private string serviceName;
+    private string fileName;
+    private int timeout;
+
+    public string ServiceName { get => serviceName; set => serviceName = value; }
+    public string FileName { get => fileName; set => fileName = value; }
+    public int Timeout { get => timeout; set => timeout = value; }
   }
 }
