@@ -34,6 +34,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Morph, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\bin\Debug\Morph.dll</HintPath>
+    </Reference>
+    <Reference Include="Morph.Daemon.Client, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\bin\Debug\Morph.Daemon.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Morph.Endpoint">
+      <HintPath>..\..\..\bin\Debug\Morph.Endpoint.dll</HintPath>
+    </Reference>
+    <Reference Include="Morph.Sequencing">
+      <HintPath>..\..\..\bin\Debug\Morph.Sequencing.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
@@ -64,14 +78,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Morph\Morph.Daemon.Client\Morph.Daemon.Client.csproj">
-      <Project>{CBE2A2F9-1B62-4DB3-8DB8-E8BBEF96F116}</Project>
-      <Name>Morph.Daemon.Client</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Morph\Morph\Morph.csproj">
-      <Project>{26117DA7-B5AE-42C1-BECA-FB29061D6C36}</Project>
-      <Name>Morph</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Booking\Booking.csproj">
       <Project>{F4F4C2AF-D264-475C-8E5F-6E1EE50B44AC}</Project>
       <Name>Booking</Name>

@@ -66,7 +66,7 @@ namespace MorphDemoBookingClient
 
   public class BookingDiplomatClientImpl : MorphReference, BookingDiplomatClient
   {
-    public BookingDiplomatClientImpl(MorphApartment apartment, BookingClientForm form)
+    public BookingDiplomatClientImpl(Apartment apartment, BookingClientForm form)
       : base(BookingInterface.DiplomatClientTypeName)
     {
       _Form = form;
@@ -101,11 +101,11 @@ namespace MorphDemoBookingClient
       Add(new BookingDiplomatServerFactory());
     }
 
-    private class BookingDiplomatServerFactory : IReferenceDecoder
-    {
+    private class BookingDiplomatServerFactory : IReferenceFactory
+        {
       #region IReferenceFactory Members
 
-      public bool DecodeReference(ServletProxy Value, out object Reference)
+      public bool CreateReference(ServletProxy Value, out object Reference)
       {
         if (BookingInterface.DiplomatServerTypeName.Equals(Value.TypeName))
         {

@@ -41,7 +41,7 @@ namespace MorphDemoBookingServer
 
     #endregion
 
-    public Registration(string ClientName, BookingDiplomatClientProxy ClientProxy, MorphApartment Apartment)
+    public Registration(string ClientName, BookingDiplomatClientProxy ClientProxy, Apartment Apartment)
     {
       //  Client identification
       _ClientName = ClientName;

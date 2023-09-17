@@ -16,7 +16,7 @@ namespace MorphDemoBookingClient
       {
         MorphManager.startup(5);
         MorphManager.ReplyTimeout = new TimeSpan(0, 20, 0);
-        MorphApartment apartment = new MorphApartmentShared(new InstanceFactories());
+        Apartment apartment = new Apartment(new InstanceFactories());
         _BookingClient = new BookingDiplomatClientImpl(apartment, this);
       }
       catch
@@ -69,7 +69,7 @@ namespace MorphDemoBookingClient
         if (_BookingServer == null)
           try
           {
-            MorphApartmentProxy ServerSide = MorphApartmentProxy.ViaLocal(BookingInterface.ServiceName, new TimeSpan(0, 30, 10), new BookingFactory());
+            ApartmentProxy ServerSide = ApartmentProxy.ViaLocal(BookingInterface.ServiceName, new TimeSpan(0, 30, 10), new BookingFactory());
             BookingRegistration Registration = new BookingRegistrationProxy(ServerSide.DefaultServlet);
             _BookingServer = Registration.register(textClientName.Text, _BookingClient);
           }

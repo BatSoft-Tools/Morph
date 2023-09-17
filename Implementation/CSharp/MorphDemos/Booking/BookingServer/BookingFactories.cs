@@ -7,22 +7,22 @@ using MorphDemoBooking;
 
 namespace MorphDemoBookingServer
 {
-  public class BookingRegistrationApartmentFactory : MorphApartmentFactorySession
+  public class BookingRegistrationApartmentFactory : ApartmentFactorySession
   {
     public BookingRegistrationApartmentFactory(DefaultServletObjectFactory DefaultServletObject, InstanceFactories InstanceFactories, TimeSpan Timeout, SequenceLevel Level)
       : base(DefaultServletObject, InstanceFactories, Timeout, Level)
     {
     }
 
-    protected override MorphApartmentSession CreateApartment(object DefaultObject, SequenceLevel Level)
+    protected override ApartmentSession CreateApartment(object DefaultObject, SequenceLevel Level)
     {
       return new BookingRegistrationSession(this, DefaultObject, Level);
     }
   }
 
-  public class BookingRegistrationSession : MorphApartmentSession
+  public class BookingRegistrationSession : ApartmentSession
   {
-    public BookingRegistrationSession(MorphApartmentFactory Owner, object DefaultObject, SequenceLevel Level)
+    public BookingRegistrationSession(ApartmentFactory Owner, object DefaultObject, SequenceLevel Level)
       : base(Owner, DefaultObject, Level)
     {
       Count++;
@@ -67,11 +67,11 @@ namespace MorphDemoBookingServer
       Add(new BookingDiplomatClientFactory());
     }
 
-    private class BookingDiplomatClientFactory : IReferenceDecoder
-    {
+    private class BookingDiplomatClientFactory : IReferenceFactory
+        {
       #region IReferenceFactory Members
 
-      public bool DecodeReference(ServletProxy Value, out object Reference)
+      public bool CreateReference(ServletProxy Value, out object Reference)
       {
         if (BookingInterface.DiplomatClientTypeName.Equals(Value.TypeName))
           Reference = new BookingDiplomatClientProxy(Value);
