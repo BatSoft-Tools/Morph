@@ -89,7 +89,7 @@ namespace Morph.Params
     }
 
     private Apartment fMorphApartment = null;
-    public Apartment MorphApartment
+    public virtual Apartment MorphApartment
     {
       get { return fMorphApartment; }
       set

@@ -34,6 +34,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Morph.Daemon.Client">
+      <HintPath>..\..\..\bin\Debug\Morph.Daemon.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Morph.Endpoint">
+      <HintPath>..\..\..\bin\Debug\Morph.Endpoint.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="Microsoft.CSharp" />
@@ -73,16 +79,16 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Morph\Morph.Daemon.Client\Morph.Daemon.Client.csproj">
-      <Project>{CBE2A2F9-1B62-4DB3-8DB8-E8BBEF96F116}</Project>
-      <Name>Morph.Daemon.Client</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\..\Morph\Morph\Morph.csproj">
       <Project>{26117DA7-B5AE-42C1-BECA-FB29061D6C36}</Project>
       <Name>Morph</Name>
     </ProjectReference>
+    <ProjectReference Include="..\BasicClient\BasicClient.csproj">
+      <Project>{d971671b-417e-4249-a4c8-f9cc4ed0890d}</Project>
+      <Name>BasicClient</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Basic\Basic.csproj">
-      <Project>{3861BE9A-EF20-48F5-8B9D-C6002B90BE11}</Project>
+      <Project>{3861be9a-ef20-48f5-8b9d-c6002b90be11}</Project>
       <Name>Basic</Name>
     </ProjectReference>
   </ItemGroup>

@@ -31,6 +31,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Morph">
+      <HintPath>..\..\..\bin\Debug\Morph.dll</HintPath>
+    </Reference>
+    <Reference Include="Morph.Daemon.Client">
+      <HintPath>..\..\..\bin\Debug\Morph.Daemon.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Morph.Endpoint">
+      <HintPath>..\..\..\bin\Debug\Morph.Endpoint.dll</HintPath>
+    </Reference>
+    <Reference Include="Morph.Lib">
+      <HintPath>..\..\..\bin\Debug\Morph.Lib.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,16 +53,6 @@
     <Compile Include="BasicImpl.cs" />
     <Compile Include="BasicProxy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\Morph\Morph.Daemon.Client\Morph.Daemon.Client.csproj">
-      <Project>{CBE2A2F9-1B62-4DB3-8DB8-E8BBEF96F116}</Project>
-      <Name>Morph.Daemon.Client</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Morph\Morph\Morph.csproj">
-      <Project>{26117DA7-B5AE-42C1-BECA-FB29061D6C36}</Project>
-      <Name>Morph</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

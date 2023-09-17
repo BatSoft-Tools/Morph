@@ -34,6 +34,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Morph.Endpoint">
+      <HintPath>..\..\..\bin\Debug\Morph.Endpoint.dll</HintPath>
+    </Reference>
+    <Reference Include="Morph.Lib">
+      <HintPath>..\..\..\bin\Debug\Morph.Lib.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="Microsoft.CSharp" />
@@ -82,7 +88,7 @@
       <Name>Morph</Name>
     </ProjectReference>
     <ProjectReference Include="..\Basic\Basic.csproj">
-      <Project>{3861BE9A-EF20-48F5-8B9D-C6002B90BE11}</Project>
+      <Project>{3861be9a-ef20-48f5-8b9d-c6002b90be11}</Project>
       <Name>Basic</Name>
     </ProjectReference>
   </ItemGroup>

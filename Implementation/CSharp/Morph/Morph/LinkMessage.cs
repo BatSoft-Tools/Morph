@@ -26,7 +26,7 @@ namespace Morph
       fHasCallNumber = HasCallNumber;
       fCallNumber = CallNumber;
       fHasErrorNumber = true;
-      fErrorNumber = Error.ErrorNumber;
+      fErrorNumber = Error.ErrorCode;
       fPathTo = PathTo;
       fPathFrom = null;
     }

@@ -12,9 +12,9 @@ namespace Basic
       Add(new BasicInstanceFactory());
     }
 
-    private class BasicReferenceFactory : IReferenceDecoder
+    private class BasicReferenceFactory : IReferenceFactory
     {
-      public bool DecodeReference(ServletProxy Value, out object Reference)
+      public bool CreateReference(ServletProxy Value, out object Reference)
       {
         Reference = null;
         if (BasicInterface.ClassType_BasicDefault.Equals(Value.TypeName)) Reference = new BasicDefaultProxy(Value);

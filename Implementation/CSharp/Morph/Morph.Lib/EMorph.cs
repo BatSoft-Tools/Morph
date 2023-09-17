@@ -9,16 +9,22 @@ namespace Morph
     {
     }
 
-    private EMorph(string message, string MorphTrace)
+        public EMorph(int ErrorCode, string message)
+          : base(message)
+        {
+            fErrorCode = ErrorCode;
+        }
+
+        private EMorph(string message, string MorphTrace)
       : base(message)
     {
       fStackTrace = MorphTrace;
     }
 
-    private int fErrorNumber = Any;
-    public int ErrorNumber
+    private int fErrorCode = Any;
+    public int ErrorCode
     {
-      get { return fErrorNumber; }
+      get { return fErrorCode; }
     }
 
     public const int None = 0;

@@ -23,7 +23,7 @@ namespace Basic
       _exceptions = new BasicExceptionsImpl(UI);
     }
 
-    public override MorphApartment MorphApartment
+    public override Apartment MorphApartment
     {
       get
       {

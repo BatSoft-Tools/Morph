@@ -230,7 +230,7 @@ namespace Morph.Endpoint
       if (Message.HasCallNumber)
         ReplyMessage.CallNumber = Message.CallNumber;
       if (Error is EMorph)
-        ReplyMessage.ErrorNumber = ((EMorph)Error).ErrorNumber;
+        ReplyMessage.ErrorNumber = ((EMorph)Error).ErrorCode;
       //  Don't action the apartment link
       ReplyMessage.MoveToNextLink();
       //  Action the reply

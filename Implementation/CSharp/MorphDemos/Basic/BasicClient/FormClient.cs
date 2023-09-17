@@ -22,7 +22,7 @@ namespace BasicClient
 
     private void buttonConnect_Click(object sender, System.EventArgs e)
     {
-      MorphApartmentProxy Apartment = MorphApartmentProxy.ViaString(BasicInterface.ServiceName, new TimeSpan(0, 10, 10), new BasicFactories(), edHost.Text);
+      ApartmentProxy Apartment = ApartmentProxy.ViaString(BasicInterface.ServiceName, new TimeSpan(0, 10, 10), new BasicFactories(), edHost.Text);
       _Basic = new BasicDefaultProxy(Apartment.DefaultServlet);
       buttonConnect.Enabled = false;
       edHost.Enabled = false;
