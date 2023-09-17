@@ -21,7 +21,7 @@ namespace Clique.Win
         //  - Create default object (ie. Connector)
         CliqueConnectorImpl Connector = new CliqueConnectorWin(this);
         //  - Create the apartment factory
-        MorphApartmentFactory apartmentFactory = new MorphApartmentFactoryShared(Connector, CliqueInterface.Factories);
+        ApartmentFactory apartmentFactory = new ApartmentFactoryShared(Connector, CliqueInterface.Factories);
         //  - Create a diplomat for this device
         CliqueDiplomatImpl Diplomat = new CliqueDiplomatWin(this);
         Diplomat.MorphApartment = Connector.MorphApartment;
@@ -47,7 +47,7 @@ namespace Clique.Win
 
     private void buttonConnect_Click(object sender, EventArgs e)
     {
-      MorphApartmentProxy ApartmentProxy = MorphApartmentProxy.ViaString(CliqueInterface.ServiceName, new TimeSpan(0, 0, 10), CliqueInterface.Factories, textIP.Text);
+      ApartmentProxy ApartmentProxy = ApartmentProxy.ViaString(CliqueInterface.ServiceName, new TimeSpan(0, 0, 10), CliqueInterface.Factories, textIP.Text);
       CliqueConnector RemoteConnector = new CliqueConnectorProxy(ApartmentProxy.DefaultServlet);
       CliqueObjects.AddFriend(RemoteConnector.hello(CliqueObjects.MyDiplomat));
     }

@@ -11,9 +11,9 @@ namespace Clique.Interface
       Add(new CliqueDecoder());
     }
 
-    private class CliqueDecoder : IReferenceDecoder
+    private class CliqueDecoder : IReferenceFactory
     {
-      public bool DecodeReference(ServletProxy Value, out object Reference)
+      public bool CreateReference(ServletProxy Value, out object Reference)
       {
         if (Value.TypeName.Equals(CliqueInterface.ConnectorTypeName)) Reference = new CliqueConnectorProxy(Value);
         else if (Value.TypeName.Equals(CliqueInterface.DiplomatTypeName)) Reference = new CliqueDiplomatProxy(Value);

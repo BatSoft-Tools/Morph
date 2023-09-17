@@ -34,6 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Morph.Endpoint">
+      <HintPath>..\..\..\bin\Debug\Morph.Endpoint.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
@@ -80,7 +83,7 @@
       <Name>Morph</Name>
     </ProjectReference>
     <ProjectReference Include="..\CliqueInterface\CliqueInterface.csproj">
-      <Project>{1608BED0-63E8-46DE-842A-12F2A70F9D26}</Project>
+      <Project>{8cb6a9a0-ae83-429b-a96a-f74a38628e2d}</Project>
       <Name>CliqueInterface</Name>
     </ProjectReference>
   </ItemGroup>
