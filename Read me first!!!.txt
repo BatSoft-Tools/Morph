@@ -1,0 +1,9 @@
+Use the CodePlex version.
+-------------------------
+
+Do NOT bother with the Interim Version; it's badly oudated.
+
+Morph is not new, and I had multiple versions from different repositories over the years. When resurrecting Morph, I initially picked the wrong repository (based on modification dates) and wasted a fair bit of time making it run using Visual Studio 2017, as it was too broken for Visual Studio 2022.
+
+Later I examined the versions more carefully, and found the CodePlex version to be the latest and greatest.
+It even compiled and ran with *no effort* using Visual Studio 2022!  Doh!  <facepalm>

@@ -1,0 +1,26 @@
+
+Usage rights and rules:
+1. The definition of the Morph Protocol is free for anyone to implement and use.  This is permanent and for all time.  However...
+2. The definition of the Morph Protocol is NOT to be altered nor extended in any way by anyone other than Peter Sven Thönell.  This will last until Peter Thönell has found/established a group that is trusted to maintain the definition of the Morph Protocol sustainably and responsibly.
+3. Implementations of the Morph Protocol MUST accurately follow the definition of the Morph Protocol, with two exeptions; studying and experimenting on potential improvements.
+
+The reason for these restrictions is to enable the Morph Protocol to be ubiquitously available, useful and free, while preventing fragmentation and incompatibilities that would reduce the usability of the Morph protocol.
+
+Any questions, or suggestions for changes to the Morph Protocol, can be sent to: peter@batsoft.com.au
+Good suggestions are likely to be adopted, though possibly with alterations.
+
+---
+
+This repository also contains an implementation written in C# using Visual Studio.
+This C# implementation of the Morph Protocol has no restrictions nor limitations placed upon it. Anyone may use, deploy, copy, alter, translate, study and experiment with it without any restrictions or limitations whatsoever.
+
+If you make good demos, or improve the C# code, you're welcome to send that to peter@batsoft.com.au so that may be added to the repository... with kudos given to the author, of course.  :)
+
+---
+
+This repository also contains a *very* incomplete implementation written in Delphi.
+The same rules apply as for the C# implementation: do what you like with it, and you're welcome to send in code.
+
+---
+
+Enjoy!  =)
