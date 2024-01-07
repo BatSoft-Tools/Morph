@@ -1,0 +1,59 @@
+package MorphPackage;
+
+{$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
+{$DESCRIPTION 'Morph Package'}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl;
+
+contains
+  Morph.Client in 'Morph.Client.pas',
+  Morph.Core.Path in 'Morph.Core.Path.pas',
+  Morph.Core.Action in 'Morph.Core.Action.pas',
+  Morph.Core.Errors in 'Morph.Core.Errors.pas',
+  Morph.Core.Types in 'Morph.Core.Types.pas',
+  Morph.Core.Reader in 'Morph.Core.Reader.pas',
+  Morph.Core.Containers in 'Morph.Core.Containers.pas',
+  Morph.Core.Streams in 'Morph.Core.Streams.pas',
+  Morph.Core.Link in 'Morph.Core.Link.pas',
+  Morph.Link_End in 'Morph.Link_End.pas',
+  Morph.Link_Message in 'Morph.Link_Message.pas',
+  Morph.Link_Service in 'Morph.Link_Service.pas',
+  Morph.Link_Servlet in 'Morph.Link_Servlet.pas',
+  Morph.Link_Member in 'Morph.Link_Member.pas',
+  Morph.Link_Internet in 'Morph.Link_Internet.pas',
+  Morph.Endpoint.Apartment in 'Morph.Endpoint.Apartment.pas',
+  Morph.Endpoint.Values in 'Morph.Endpoint.Values.pas',
+  Morph.Endpoint.Service in 'Morph.Endpoint.Service.pas',
+  Morph.Endpoint.Servlet in 'Morph.Endpoint.Servlet.pas',
+  Morph.Endpoint.Proxy in 'Morph.Endpoint.Proxy.pas',
+  Morph.Lib.Factories in 'Morph.Lib.Factories.pas',
+  Morph.Link_Data in 'Morph.Link_Data.pas';
+
+end.
+

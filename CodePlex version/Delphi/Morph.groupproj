@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{C19C643D-4816-4965-986B-219781A9A010}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="MorphPackage\MorphPackage.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="MorphPackageTest\MorphPackageTests.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="MorphPackage">
+        <MSBuild Projects="MorphPackage\MorphPackage.dproj"/>
+    </Target>
+    <Target Name="MorphPackage:Clean">
+        <MSBuild Projects="MorphPackage\MorphPackage.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="MorphPackage:Make">
+        <MSBuild Projects="MorphPackage\MorphPackage.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="MorphPackageTests">
+        <MSBuild Projects="MorphPackageTest\MorphPackageTests.dproj"/>
+    </Target>
+    <Target Name="MorphPackageTests:Clean">
+        <MSBuild Projects="MorphPackageTest\MorphPackageTests.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="MorphPackageTests:Make">
+        <MSBuild Projects="MorphPackageTest\MorphPackageTests.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="MorphPackage;MorphPackageTests"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="MorphPackage:Clean;MorphPackageTests:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="MorphPackage:Make;MorphPackageTests:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
