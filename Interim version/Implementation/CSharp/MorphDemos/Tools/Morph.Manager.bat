@@ -1,1 +1,1 @@
-start ..\..\Morph\Morph.Manager\bin\Debug\Morph.Manager.exe
+start ..\..\bin\Debug\Morph.Manager.exe
