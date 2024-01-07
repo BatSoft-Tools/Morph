@@ -34,6 +34,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Morph, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\bin\Debug\Morph.dll</HintPath>
+    </Reference>
     <Reference Include="Morph.Daemon.Client">
       <HintPath>..\..\..\bin\Debug\Morph.Daemon.Client.dll</HintPath>
     </Reference>
@@ -79,10 +83,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Morph\Morph\Morph.csproj">
-      <Project>{26117DA7-B5AE-42C1-BECA-FB29061D6C36}</Project>
-      <Name>Morph</Name>
-    </ProjectReference>
     <ProjectReference Include="..\BasicClient\BasicClient.csproj">
       <Project>{d971671b-417e-4249-a4c8-f9cc4ed0890d}</Project>
       <Name>BasicClient</Name>

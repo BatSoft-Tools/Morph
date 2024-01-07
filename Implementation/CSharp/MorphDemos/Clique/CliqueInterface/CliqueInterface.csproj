@@ -32,9 +32,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Morph.Endpoint">
-      <HintPath>..\..\..\bin\Debug\Morph.Endpoint.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
@@ -43,6 +40,12 @@
     <Compile Include="CliqueInterface.cs" />
     <Compile Include="CliqueProxy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Morph\Morph.Endpoint\Morph.Endpoint.csproj">
+      <Project>{54bf704c-d6a6-432d-8e13-c8e1cb4fe602}</Project>
+      <Name>Morph.Endpoint</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

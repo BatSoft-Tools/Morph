@@ -30,10 +30,17 @@ namespace Clique.Win
         //  Make the apartment factory visible under the service name "Morph.Demo.Clique" to make it active
         MorphManager.Services.startServiceShared(CliqueInterface.ServiceName, false, true, Connector, CliqueInterface.Factories);
       }
-      catch
+      catch (Exception x)
       {
-        MessageBox.Show("Morph.Daemon is not accessible.  Ensure that it is running.");
-        Close();
+        MessageBox.Show(x.StackTrace, x.Message);
+        try
+        {
+          MorphManager.Services.stopService(CliqueInterface.ServiceName);
+        }
+        finally
+        {
+          Close();
+        }
       }
     }
 
